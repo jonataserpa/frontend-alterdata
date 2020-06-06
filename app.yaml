@@ -1,0 +1,20 @@
+runtime: python27
+api_version: 1
+threadsafe: true
+service: default
+
+skip_files:
+- ^(?!src)
+
+handlers:
+  - url: /(.*\.(js|map|css|png|jpg|ico|svg|ttf|woff|txt|html|json))$
+    static_files: src/\1
+    upload: src/.*\.(js|map|css|png|jpg|ico|svg|ttf|woff|txt|html|json)$
+    secure: always
+    http_headers:
+        Access-Control-Allow-Origin: "*" 
+
+  - url: .*
+    static_files: src/index.html
+    upload: src/index.html
+    secure: always

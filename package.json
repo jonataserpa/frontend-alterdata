@@ -1,0 +1,8 @@
+{
+  "dependencies": {
+    "@auth0/auth0-spa-js": "^1.9.0",
+    "@webcomponents/webcomponentsjs": "^2.2.3",
+    "auth0-lock": "^11.24.2",
+    "lit-element": "^2.0.0-rc.2"
+  }
+}
